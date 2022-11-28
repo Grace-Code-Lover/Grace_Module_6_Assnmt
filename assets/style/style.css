@@ -1,0 +1,80 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css"); 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100vw;
+    height: 70px;
+    padding: 0;
+    position: relative;
+    left: -120px;
+}
+
+nav ul li .nav-link{
+    margin-top: 10px;
+    color: black;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 14px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: 100px;
+    position: relative;
+    left: 0;
+}
+
+
+.nav-item form {
+    margin: 5px;
+    margin-top: 5px;
+    border-radius: 25px;
+    border: 1.5px solid black;
+    height: 47px;
+    width: 550px;
+    padding: 10px;
+    background-color: rgb(239, 245, 243);
+}
+
+.nav-item form button{
+    display: none;
+}
+.nav-item input[type="search"]{
+    padding: 10px;
+    background-color: inherit;
+    border: none;
+}
+
+/* .nav-item input[type="search"]::after {
+    border: none;
+} */
+
+.btn{
+    border-radius: 0;
+    border: 1.5px solid black;
+    margin-left: 12px;
+    padding: 5px 4px;
+}
+
+.nav-link i {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.btn-dark{
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+
+ .dropdown a:hover{
+    color: rgb(137, 5, 163);
+ }
