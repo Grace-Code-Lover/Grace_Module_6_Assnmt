@@ -1,9 +1,13 @@
-@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css"); 
+/* @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");  */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 nav{
@@ -50,14 +54,10 @@ nav ul li .nav-link{
     border: none;
 }
 
-/* .nav-item input[type="search"]::after {
-    border: none;
-} */
-
 .btn{
     border-radius: 0;
     border: 1.5px solid black;
-    margin-left: 12px;
+    margin-left: 13px;
     padding: 5px 4px;
 }
 
@@ -66,15 +66,277 @@ nav ul li .nav-link{
     font-size: 20px;
 }
 
-.btn-dark{
-    color: white;
-}
 
 .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; 
  }
 
  .dropdown a:hover{
     color: rgb(137, 5, 163);
  }
+
+.dropdown .dropdown-menu {
+    height: 170px;
+    width: 340px;
+}
+
+.dropdown .dropdown-menu li p, .dropdown .dropdown-menu .cart-text{
+    /* word-wrap: break-word; */
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    padding: 15px;
+    
+}
+
+.dropdown .dropdown-menu li a {
+    margin-top: -10%;
+    margin-left: 20%;
+    width: 60%;
+}
+
+.dropdown .dropdown-menu .cart-text + li a{
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color:rgb(137, 5, 163) ;
+}
+
+.dropdown .dropdown-menu:has(.cart-text) {
+    height: 120px;
+    width: 250px;
+}
+
+.dropdown .categories{
+    gap: 25px;
+    height: 700%;
+    width: 300%;
+    padding-top: 35px;
+    border-radius: 0;
+}
+
+.dropdown .categories .dropdown-item {
+    margin-left: 0;
+}
+
+.big-img-container{
+    padding: 0;
+    position: relative;
+    left: -120px;
+    
+}
+
+.big-img-container img {
+    z-index: 1;
+}
+
+.big-img-container .cyber-text{
+    z-index: 5;
+    position: absolute;
+    top: 90px;
+    left: 70px;
+    background-color: white;
+    width: 40%;
+    height: 40%;
+    padding: 18px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.432);
+}
+
+.big-img-container .cyber-text h1, .course-selection > h1 {
+    font-size: 240%;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.big-img-container .cyber-text p{
+    font-size: 120%;
+    font-weight: 300;
+    font-family: sans-serif
+}
+
+.course-selection {
+    position: relative;
+    left: -60px;
+    top: 30px;
+    padding: 10px 15px 30px 10px;
+    
+}
+
+.course-selection > p {
+    margin-top: 27px;
+    font-family: sans-serif;
+}
+
+.course-list {
+    margin: 40px 0 20px 0;
+    display: flex;
+    justify-content:flex-start ;
+    gap: 1px;
+}
+
+.course-list-item {
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: gray;
+}
+
+.course-list-item:first-child{
+    color: black;
+}
+
+.course-list-item:hover{
+    font-family: Arial, Helvetica, sans-serif;color: black;
+    cursor: pointer;
+}
+
+.course-details{
+    border: 1px solid #0000008c;
+    padding: 15px 16px 70px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 90vw;
+}
+
+.course-details h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.course-details p {
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 16px;
+    width: 70%;
+}
+
+.course-details > a {
+    width: fit-content;
+    padding: 7px;
+    font-weight: 700;
+    border: 2px solid black;
+    margin: 8px 0;
+
+}
+
+.python-course-list {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.python-course-list-item {
+    width: 20%;
+}
+
+.python-course-list-item img {
+    width: 85%;
+}
+
+.python-course-list-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.python-course-list-item small{
+    color: rgb(56, 56, 56);
+    font-style: italic;
+    margin: 5px 0 0 10px;
+}
+
+.python-course-list-item .python-rating {
+    display: flex;
+}
+
+.python-course-list-item .python-rating h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: rgb(175, 172, 4);
+}
+
+.python-course-list-item .python-rating .fa-star, .python-course-list-item .python-rating .fa-star-half-stroke{
+    font-size: 12px;
+    color: rgb(196, 192, 4);
+}
+
+.python-course-list-item .python-rating + span{
+    display: flex;
+}
+
+.python-course-list-item .python-rating + span h3 {
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.python-course-list-item .python-rating + span i {
+    font-size: 15px;
+    color: grey;
+    text-decoration:line-through ;
+}
+
+.gray-band-section {
+    padding: 20px;
+    position: relative;
+    left: -120px;
+    width: 100vw;
+    height: 8%;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 0;
+}
+
+.gray-band-section .gray-band-section-item{
+    display: flex;
+}
+
+.gray-band-section .gray-band-section-item i{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(180, 178, 178);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 10px;
+    padding: 8px 0 0 1px;
+}
+
+.gray-band-section .gray-band-section-item h6 {
+    font-weight: 700;
+}
+
+.gray-band-section-2 {
+    padding: 20px 50px;
+    position: relative;
+    left: -120px;
+    width: 100vw;
+    height: 20%;
+    background-color: rgb(236, 236, 236);
+    margin: 10% 0 0 0;
+}
+
+.gray-band-section-2 .topics {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.gray-band-section-2 .gray-band-section-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gray-band-section-2 .gray-band-section-item a{
+    color: blueviolet;
+    margin-top: 20px;
+}
